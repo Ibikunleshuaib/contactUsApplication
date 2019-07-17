@@ -1,0 +1,14 @@
+<% include partials/header %>
+<div style="background-color: bisque">
+<ul>
+    <% message.forEach(function(messages) { %>
+        <hr>
+        <li><h4>Name: <%= messages.name %></h4></li>
+       <li><h4>Email: <%= messages.email %></h4></li>
+       <li><h4>Phone Number: <%= messages.phoneNumber %></h4></li>
+       <li><h4>Business Type: <%= messages.businessType %></h4></li>
+
+    <% }) %>
+</ul>
+</div>
+<% include partials/footer %>

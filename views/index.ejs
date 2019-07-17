@@ -1,0 +1,36 @@
+<% include partials/header %>
+<h1>Add Customer</h1>
+    <form method="post" action="/users/add">
+        <label>First Name: </label>
+        <br>
+        <input type="text" name="firstName">
+        <br>
+        <label>Last Name: </label>
+        <br>
+        <input type="text" name="lastName">
+        <br>
+        <label>Email: </label>
+        <br>
+        <input type="text" name="email">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+<h1><%= title %></h1>
+<h2>My First EJS Code</h2>
+<ul>
+    <% users.forEach(function(user) { %>
+        <li><%= user.firstName %> <%= user.lastName %> is age <%= user.age %></li>
+
+    <% }) %>
+</ul>
+<!--
+<ul>
+    <% mewMessage.forEach(function(new) { %>
+        <li><%= new.name %> <%= new.email %></li>
+
+    <% }) %>
+</ul>
+-->
+<h3><%= newMessage %></h3>
+<% include partials/footer %>
+

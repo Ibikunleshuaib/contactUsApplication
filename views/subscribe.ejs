@@ -1,0 +1,12 @@
+<% include partials/header %>
+
+<div style="background-color:cadetblue">
+    <ul>
+        <% subscribe.forEach(function(subscribes) { %>
+            <hr>
+           <li><h4>Email: <%= subscribes.email %></h4></li>
+        <% }) %>
+    </ul>
+    </div>
+
+<% include partials/footer %>
