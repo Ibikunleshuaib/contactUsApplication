@@ -2,10 +2,15 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/nodekb', {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://user:Private11@ds133932.mlab.com:33932/heroku_ctx85nkj', {useNewUrlParser: true});
 let db = mongoose.connection
 const app = express();
 const PORT = process.env.PORT || 5001;
+
+
+//PRODUCTION DATABASE CODE
+
+//mongodb://<dbuser>:<dbpassword>@ds133932.mlab.com:33932/heroku_ctx85nkj
 
 //Check connection
 db.once('open', () => {
